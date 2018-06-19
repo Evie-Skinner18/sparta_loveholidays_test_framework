@@ -11,7 +11,7 @@ class LoveholidaysHomepage
   # HOLIDAYS_MENU =
 
 
-  ALL_HOLIDAYS_LINK = 'View all holidays'
+  ALL_HOLIDAYS_LINK = 'View all Holidays'
 
     #no need to do the @driver variable eachtime because we've already set up the driver in the spec helper
   def visit_homepage
@@ -20,6 +20,7 @@ class LoveholidaysHomepage
 
   def view_all_holidays
     find(:xpath,'//*[@id="menu-bar"]/nav/ul/li[1]').click
+    click_link(ALL_HOLIDAYS_LINK)
     sleep 5
   end
 
