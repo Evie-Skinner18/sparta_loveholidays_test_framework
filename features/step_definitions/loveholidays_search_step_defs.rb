@@ -7,7 +7,7 @@ And(/^I click on All Holidays$/) do
 end
 
 Then(/^I receive a list of all available holidays$/) do
-  pending
+  loveholidays_search_results.check_all_holidays_url
 end
 
 
