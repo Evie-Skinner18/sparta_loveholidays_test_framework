@@ -7,8 +7,11 @@ class LoveholidaysHomepage
 
   #page object
   HOMEPAGE_URL = "https://www.loveholidays.com/"
-  HOLIDAYS_MENU = "Holidays"
-  ALL_HOLIDAYS_LINK = "View all holidays"
+  HOLIDAYS_NAVBAR_LINK = '.mega-menu__top__menu-item'
+  # HOLIDAYS_MENU =
+
+
+  ALL_HOLIDAYS_LINK = 'View all holidays'
 
     #no need to do the @driver variable eachtime because we've already set up the driver in the spec helper
   def visit_homepage
@@ -16,8 +19,8 @@ class LoveholidaysHomepage
   end
 
   def view_all_holidays
-    click_link(HOLIDAYS_MENU)
-    click_link(ALL_HOLIDAYS_LINK)
+    find(:xpath,'//*[@id="menu-bar"]/nav/ul/li[1]').click
+    sleep 5
   end
 
 
